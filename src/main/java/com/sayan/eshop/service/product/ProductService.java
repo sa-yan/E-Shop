@@ -1,13 +1,14 @@
 package com.sayan.eshop.service.product;
 
 import com.sayan.eshop.model.Product;
+import com.sayan.eshop.request.AddProductRequest;
 
 import java.util.List;
 
 public interface ProductService {
-    Product addProduct(Product product);
+    Product addProduct(AddProductRequest product);
     Product getProductById(Integer id);
-    void updateProduct(Product product, Integer id);
+    Product updateProduct(AddProductRequest productRequest, Integer id);
     void deleteProduct(Integer id);
     List<Product> getAllProducts();
     List<Product> getProductsByCategory(String category);
